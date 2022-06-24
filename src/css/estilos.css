@@ -4,16 +4,16 @@
     width: 500px;
     min-height: 500px;
     margin: 0 auto;
-    background: #34495e;
+    background: #04b358ff;
     color: #fff;
-    border: 6px solid #2c3e50;
+    border: 6px solid #008647ff;
     border-radius: 10px;
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
 .game > div {
-    border: 6px solid #2c3e50;
+    border: 6px solid #008647ff;
     border-radius: 2px;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bold;
