@@ -49,6 +49,10 @@ const tic_tac_toe = {
         console.log('Fim de jogo');
     },
 
+    is_game_over: function() {
+        return !this.board.includes('');
+    },
+
     check_winning_sequences: function(simbol){
         for ( i in this.winning_sequences) {
             if (this.board [ this.winning_sequences[i][0] ] == simbol && 
@@ -60,6 +64,15 @@ const tic_tac_toe = {
         }
         return -1;
     },
+
+    stylize_winner_sequence(winner_sequence) {
+        winner_sequence.forEach((position) => {
+          this
+            .container_element
+            .querySelector(`div:nth-child(${position + 1})`)
+            .classList.add('winner');
+        });
+      },
 
     draw: function(){
         let content = '';
@@ -74,7 +87,16 @@ const tic_tac_toe = {
     start: function(){
         this.board.fill('');
         this.draw();
+        this.gameover = false;
         console.log('Inicio do Jogo');
+    },
+
+    restart: function() {
+        if (this.is_game_over() || this.gameover) {
+            this.start();
+        } else if (confirm('Jogo em andamento, quer mesmo Re-Iniciar?')) {
+            this.start();
+        }
     },
 
 };
