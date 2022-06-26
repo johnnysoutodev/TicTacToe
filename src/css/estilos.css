@@ -40,6 +40,7 @@ body {
 
 .btn {
   border: 5px solid #04b358ff;
+  border-radius: 10px;
   background-color: #008647ff;
   color: white;
   margin-top: 10px;
