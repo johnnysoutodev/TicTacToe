@@ -1,5 +1,12 @@
 /* estilos.css */
 
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .game {
     width: 500px;
     min-height: 500px;
@@ -21,6 +28,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.game > div.winner {
+  background: yellow;
+}
+
+.game > div.winner > span {
+  color: blue;
+}
+
+.btn {
+  border: 5px solid #04b358ff;
+  background-color: #008647ff;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
   @media screen and (max-width: 480px) {
