@@ -31,7 +31,7 @@ body {
 }
 
 .game > div.winner {
-  background: yellow;
+  background: red;
 }
 
 .game > div.winner > span {
