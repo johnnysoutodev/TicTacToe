@@ -34,6 +34,7 @@ const tic_tac_toe = {
             let winning_sequences_index = this.check_winning_sequences ( this.simbols.options [ this.simbols.turn_index ]);
             if (winning_sequences_index >= 0){
                 this.game_is_over();
+                this.stylize_winner_sequence(this.winning_sequences[winning_sequences_index]);
             } else {
                 this.simbols.change();
             }
@@ -75,13 +76,7 @@ const tic_tac_toe = {
       },
 
     draw: function(){
-        let content = '';
-
-        for( i in this.board){
-            content += '<div onclick="tic_tac_toe.make_play(' + i + ')">' + this.board[i] + '</div>';
-        }
-
-        this.container_element.innerHTML = content;
+        this.container_element.innerHTML = this.board.map((element, index) => `<div onclick="tic_tac_toe.make_play('${index}')"> ${element} </div>`).reduce((content, current) => content + current);
     },
 
     start: function(){
