@@ -54,4 +54,10 @@ body {
         width: 90vw;
         min-height: 45vh;
     }
+
+    .btn {
+      width: 50vw;
+      min-height: 60px;
+      font-size: 1.2em;
+    }
   }
